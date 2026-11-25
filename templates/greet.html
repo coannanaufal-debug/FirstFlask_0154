@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Salam | Flask</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="greet-page">
+    <main class="card">
+        {% if error %}
+            <div class="icon">!</div>
+            <h1>Oops!</h1>
+            <p>{{ error }}</p>
+            <a href="/">Coba lagi</a>
+        {% else %}
+            <div class="icon">&#10003;</div>
+            <h1>Halo, {{ name }}!</h1>
+            <p>Senang melihatmu di proyek pertama Flask. Selamat berkarya dan terus belajar!</p>
+            <a href="/">Kembali</a>
+        {% endif %}
+    </main>
+</body>
+</html>
